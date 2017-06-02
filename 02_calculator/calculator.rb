@@ -26,3 +26,6 @@ end
 def factorial(n)
   (1..n).inject(:*) || 0
 end
+
+def test
+end

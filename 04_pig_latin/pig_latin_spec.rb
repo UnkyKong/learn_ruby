@@ -69,4 +69,14 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "translates words with capital letters(capitalizing a different word)" do
+      s = translate("This is how I do this")
+      expect(s).to eq("Isthay isay owhay Iay oday isthay")
+  end
+  
+  it "translates retaining proper punctuation" do
+    s = translate("This, is a test!?")
+    expect(s).to eq("Isthay, isay aay esttay!?")
+  end
+  
 end
