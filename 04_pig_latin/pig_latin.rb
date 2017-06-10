@@ -9,10 +9,8 @@ def translate(sent)
 
   words = sent.split(" ")
   words.each do |word|
-    punc = ''
-    if word =~ punctuation
-      punc = punctuation.match(word).to_s
-      word[punctuation] = ''
+    punc = punctuation.match(word).to_s || '' 
+    word[punctuation] = '' if word =~ punctuation
     end
     
     if word =~ vowel
